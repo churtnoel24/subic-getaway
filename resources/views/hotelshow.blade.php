@@ -17,11 +17,11 @@
             <div class="ribbon">
                 <nav>
                     <ul>
-                        <li><a href="about">About Us</a></li>
-                        <li><a href="hotel"> Hotels & Restaurants</a></li>
-                        <li><a href="attractions">Attractions</a></li>
-                        <li><a href="news">News & Events</a></li>
-                        <li><a href="contact">Contact Us</a></li>
+                        <li><a href="../about">About Us</a></li>
+                        <li><a href="../hotel"> Hotels & Restaurants</a></li>
+                        <li><a href="../attractions">Attractions</a></li>
+                        <li><a href="../news">News & Events</a></li>
+                        <li><a href="../contact">Contact Us</a></li>
                     </ul>
                 </nav>
             </div>
@@ -152,11 +152,11 @@
         <div class="footer-ribbon">
             <nav>
                 <ul>
-                    <li><a href="about">About Us</a></li>
-                    <li><a href="hotel"> Hotels & Restaurants</a></li>
-                    <li><a href="attractions">Attractions</a></li>
-                    <li><a href="news">News & Events</a></li>
-                    <li><a href="contact">Contact Us</a></li>
+                    <li><a href="../about">About Us</a></li>
+                    <li><a href="../hotel"> Hotels & Restaurants</a></li>
+                    <li><a href="../attractions">Attractions</a></li>
+                    <li><a href="../news">News & Events</a></li>
+                    <li><a href="../contact">Contact Us</a></li>
                 </ul>
             </nav>
         </div>
