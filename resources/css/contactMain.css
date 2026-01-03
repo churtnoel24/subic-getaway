@@ -1,0 +1,224 @@
+/* Base */
+* { 
+    box-sizing: border-box; 
+    margin: 0; padding: 0; 
+}
+html, body {
+     height: 100%; 
+    }
+body { 
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+    background: peachpuff;
+}
+
+/* miscellaneous */
+img {
+    max-width: 100%;
+    display: block;
+}
+ul {
+    list-style: none;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Header with background carousel */
+header { 
+    position: relative;
+    min-height: 320px;
+    overflow: hidden;
+}
+
+.carousel {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+.carousel > div { 
+    position: absolute; 
+    inset: 0; opacity: 0; 
+    transition: opacity .6s ease; 
+}
+.carousel img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+    filter: brightness(80%);
+}
+
+/* logo + ribbon nav*/
+.upper { 
+    position: relative; 
+    height: 120px; 
+    padding-left: 100px;
+}
+.upper img {
+    position: relative;
+    z-index: 2;
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+    border-radius: 25px;
+    top: 16px;
+}
+
+.ribbon { 
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 60px;
+    background: rgba(0, 0, 0, 0.9); 
+    border-radius: 2px;
+    width: 100%;
+    z-index: 1;
+}
+.ribbon nav ul { 
+    display: flex; 
+    justify-content: flex-start; 
+    gap: 28px; 
+    padding: 12px 24px; 
+    padding-left: 50%;
+}
+.ribbon nav a {
+    color: #fff;
+    font-size: 15px;
+}
+.ribbon nav a:hover {
+    text-decoration: underline;
+}
+
+/* When clicked arrows */
+#s1:checked ~ .carousel #slide1 {
+    opacity: 1;
+}
+#s2:checked ~ .carousel #slide2 {
+    opacity: 1;
+}
+#s3:checked ~ .carousel #slide3 {
+    opacity: 1;
+}
+
+/* visibility*/
+#s1:checked ~ .nav1,
+#s2:checked ~ .nav2,
+#s3:checked ~ .nav3 {
+    display: flex;
+}
+
+/* Arrows*/
+.nav-controls { 
+    position: absolute; inset: 0; 
+    display: none; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 0 16px; 
+    pointer-events: none;
+}
+.nav-controls .arrow { 
+    pointer-events: auto; 
+    background: rgba(0,0,0,0.55); 
+    color: #fff; 
+    width: 44px; height: 44px; 
+    border-radius: 50%; 
+    display: grid; place-items: center; 
+    cursor: pointer; 
+}
+.nav-controls .arrow:hover{
+    background: rgba(0,0,0,0.75);
+}
+
+/* Ads */
+.ads { 
+    grid-column: 2; 
+    margin-top: 12px;
+}
+.ads ul { 
+    display: grid; 
+    gap: 18px; 
+}
+.ads li { 
+    background:#e9e9e9; 
+    border-radius: 15px; 
+    overflow: hidden; 
+    border: 1px solid #d2d2d2;
+}
+.ads img {
+    width: 100%; 
+    height: 140px; 
+    object-fit: cover;
+    border-radius: 15px; 
+}
+.bookingform .ads { 
+    margin-top: 18px; 
+}
+
+/* Footer */
+footer {
+    background:#353434;
+    margin-top: 40px;
+}
+.footer-ribbon {
+    background:#000000;
+}
+.footer-ribbon ul {
+    display:flex;
+    justify-content:center;
+    gap:28px;
+    padding:12px 10px;
+}
+.footer-ribbon a {
+    color:#fff;
+    font-size:14px;
+}
+
+.detail { 
+    width: min(1200px, 92%); 
+    margin: 0 auto; 
+    display: grid; 
+    grid-template-columns: 1fr auto; 
+    align-items: center; 
+    gap: 16px; 
+    padding: 18px 0;
+}
+.detail p {
+    color:#e2e2e2;
+    font-size: 13px;
+}
+.follow {
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+.follow p {
+    margin-right:
+    10px; font-weight: bold;
+}
+.follow img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+    main { grid-template-columns:
+        1fr;
+    }
+    .bookingform { 
+        grid-column: 1; 
+        grid-row: auto; 
+        position: static; 
+    }
+    .place {
+        grid-template-columns: 1fr;
+    }
+    .suggestions {
+        grid-template-columns: 1fr;
+    }
+    .room1, .room2 {
+        grid-template-columns: 1fr;
+    }
+    
+}

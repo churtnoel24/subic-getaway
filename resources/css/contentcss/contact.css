@@ -1,0 +1,90 @@
+main {
+    width: min(1200px, 92%);
+    margin: 28px auto;
+    display: grid;
+    grid-template-columns: 1fr 320px; 
+    column-gap: 24px;
+    row-gap: 10px;
+}
+
+/* Left content */
+.content {
+    background: #fff;
+    padding: 18px;
+    border-radius: 4px;
+}
+.content h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+.content > p { 
+    font-size: 13px; 
+    color:#444; 
+    margin-bottom: 16px;
+}
+
+/* Form layout */
+.content form {
+    display: grid;
+    gap: 14px;
+}
+.content label {
+    font-size: 12px;
+    color:#333;
+    margin-bottom: 6px;
+    display: block;
+}
+.content input[type="text"],
+.content input[type="date"],
+.content input[type="number"],
+.content input[type="tel"],
+.content select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cfcfcf;
+    border-radius: 4px;
+    background:#f7f7f7;
+    font-size: 14px;
+}
+
+/* Rows */
+.tripDetails,
+.contacts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+.members { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 14px; 
+    margin-top: 6px; 
+}
+
+/* Choice box area */
+.choice-box {
+    border: 1px solid #cfcfcf;
+    border-radius: 4px;
+    background:#f7f7f7;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px 14px;
+}
+.othersContainer input { width: 100%; }
+
+.content input[type="submit"],
+.content input[type="button"] {
+    width: 100%;
+    padding: 12px 10px;
+    border: 2px solid #111;
+    border-radius: 4px;
+    background:#fff;
+    cursor: pointer;
+}
+.content input[type="submit"]:hover {
+    background:#f1f1f1;
+}
+
+
+
